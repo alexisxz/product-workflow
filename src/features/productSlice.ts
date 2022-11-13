@@ -17,17 +17,17 @@ export const productSlice = createSlice({
             return newState
         },
 
-        deleteProduct: (state, action: PayloadAction<{ productSku: string }>) => {
-            const newState = state.filter(product => product.sku !== action.payload.productSku)
-            return newState
-        },
+        massDeleteProduct: (state, action: PayloadAction<{ productsSku: string[] }>) => {
+            const productsSku = action.payload.productsSku
+            if (!productsSku) return;
 
-        massDeleteProduct: () => {
-            const newState: State = [];
-            return newState
+            productsSku.map(sku => {
+                const updatedState = state.filter(item => item.sku !== sku)
+                return updatedState
+            })
         },
     }
 })
 
 export default productSlice.reducer
-export const { addProduct, deleteProduct, massDeleteProduct } = productSlice.actions
+export const { addProduct, massDeleteProduct } = productSlice.actions
