@@ -93,7 +93,7 @@ export default function AddProduct() {
             return (
                 <div>
                     <label>Size (MB)</label>
-                    <input required id='#size' type="number" name='size' value={formData?.size} onChange={e => handleChange(e)} />
+                    <input required id='size' type="number" name='size' value={formData?.size} onChange={e => handleChange(e)} />
                     {!formData.size ? <span style={{ color: 'red' }}>Size is required</span> : ''}
                     <p>Please provide the size in MB.</p>
                 </div>
@@ -103,11 +103,11 @@ export default function AddProduct() {
             return (
                 <div>
                     <label>Height (CM)</label>
-                    <input required id='#height' type="number" name='height' value={formData?.height} onChange={e => handleChange(e)} />
+                    <input required id='height' type="number" name='height' value={formData?.height} onChange={e => handleChange(e)} />
                     <label>Width (CM)</label>
-                    <input required id='#width' type="number" name='width' value={formData?.width} onChange={e => handleChange(e)} />
+                    <input required id='width' type="number" name='width' value={formData?.width} onChange={e => handleChange(e)} />
                     <label>Length (CM)</label>
-                    <input required id='#length' type="number" name='length' value={formData?.length} onChange={e => handleChange(e)} />
+                    <input required id='length' type="number" name='length' value={formData?.length} onChange={e => handleChange(e)} />
                     {!formData.width || !formData.height || !formData.length ? <span style={{ color: 'red' }}>HxWxL is required</span> : ''}
                     <p>Please provide the dimension in HxWxL format.</p>
                 </div>
@@ -116,7 +116,7 @@ export default function AddProduct() {
             return (
                 <div>
                     <label>Weigth (KG)</label>
-                    <input required id='#weight' type="number" name='weight' value={formData?.weight} onChange={e => handleChange(e)} />
+                    <input required id='weight' type="number" name='weight' value={formData?.weight} onChange={e => handleChange(e)} />
                     {!formData.weight ? <span style={{ color: 'red' }}>Weight is required</span> : ''}
                     <p>Please provide the weight in KG.</p>
                 </div>
@@ -142,29 +142,29 @@ export default function AddProduct() {
                     </div>
                 </div>
 
-                <form id='#product_form' className={styles.form}>
+                <form id='product_form' className={styles.form}>
                     <div className={styles.labels}>
                         <div>
                             <label>SKU</label>
-                            <input required id='#sku' type="text" name='sku' value={formData?.sku} onChange={e => handleChange(e)} />
+                            <input required id='sku' type="text" name='sku' value={formData?.sku} onChange={e => handleChange(e)} />
                             {!formData.sku ? <span style={{ color: 'red' }}>SKU is required</span> : ''}
                         </div>
 
                         <div>
                             <label>Name</label>
-                            <input required id='#name' type="text" name='name' value={formData?.name} onChange={e => handleChange(e)} />
+                            <input required id='name' type="text" name='name' value={formData?.name} onChange={e => handleChange(e)} />
                             {!formData.name ? <span style={{ color: 'red' }}>Name is required</span> : ''}
                         </div>
 
                         <div>
                             <label>Price ($)</label>
-                            <input required id='#price' type="number" name='price' value={formData?.price} onChange={e => handleChange(e)} />
+                            <input required id='price' type="number" name='price' value={formData?.price} onChange={e => handleChange(e)} />
                             {!formData.price ? <span style={{ color: 'red' }}>Price is required</span> : ''}
                         </div>
 
                         <div>
                             <label>Type Switcher</label>
-                            <select id='#productType' name='productType' value={formData?.productType} onChange={handleChange}>
+                            <select id='productType' name='productType' value={formData?.productType} onChange={handleChange}>
                                 {switches.map((switcher: any, index: any) => (
                                     <option key={index} value={switcher} >{switcher}</option>
                                 ))}

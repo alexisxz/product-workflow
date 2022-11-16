@@ -34,7 +34,7 @@ export default function Home() {
           <h1>Product List</h1>
           <div className='header-btn'>
             <Link href='/addproduct'><button>ADD</button></Link>
-            <button id='#delete-product-btn' onClick={handleMassDeleteButton}>MASS DELETE</button>
+            <button id='delete-product-btn' onClick={handleMassDeleteButton}>MASS DELETE</button>
           </div>
         </div>
 
