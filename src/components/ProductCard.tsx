@@ -30,7 +30,7 @@ const ProductCard = ({ product }: { product: IProduct }) => {
     return (
         <article className={styles.card}>
             <div>
-                <input type="checkbox" className='.delete-checkbox' onChange={handleOnChange} />
+                <input type="checkbox" className='delete-checkbox' onChange={handleOnChange} />
             </div>
             <div>
                 <h3>{product.sku}</h3>
