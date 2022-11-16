@@ -16,6 +16,6 @@ export interface IProduct {
     sku: string,
     name: string,
     price: number,
-    productType: Switcher,
-    measure: Measure,
+    productType: Switcher | string,
+    measure: string,
 }

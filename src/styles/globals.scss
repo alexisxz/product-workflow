@@ -16,13 +16,13 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   html {
     color-scheme: 6;
   }
 
   body {
-    color: white;
-    background: black;
+    color: black;
+    background: white;
   }
 }
